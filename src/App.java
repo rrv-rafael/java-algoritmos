@@ -34,31 +34,48 @@ public class App {
         System.out.println("\nArray com os elementos antes da ordenação:");
         imprimirArray(array);
 
+        int countTeste = 0;
+
         //SELECTION SORT
-        int elementoPosterior, count, countVerifica;
-
-        for (int i = 1; i < array.length; i++) {
-            count = 0;
-            countVerifica = 0;
-            
-            while (count < (array.length - 1)) {
-                if (array[count] > array[count + 1]) {
-                    elementoPosterior = array[count + 1];
-                    array[count + 1] = array[count];
-                    array[count] = elementoPosterior; 
-                    countVerifica++;
+        for (int i = 0; i < array.length; i++) {
+            int indiceDoMenor = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[indiceDoMenor]) {
+                    indiceDoMenor = j;
                 }
-
-                count++;
+                countTeste++;
             }
-
-            if (countVerifica == 0) {
-                break;
-            }
+            int temp = array[indiceDoMenor];
+            array[indiceDoMenor] = array[i];
+            array[i] = temp;
+            countTeste++;
         }
+        // int elementoPosterior, count, countVerifica;
+
+        // for (int i = 1; i < array.length; i++) {
+        //     count = 0;
+        //     countVerifica = 0;
+            
+        //     while (count < (array.length - 1)) {
+        //         if (array[count] > array[count + 1]) {
+        //             elementoPosterior = array[count + 1];
+        //             array[count + 1] = array[count];
+        //             array[count] = elementoPosterior; 
+        //             countVerifica++;
+        //         }
+
+        //         count++;
+        //     }
+
+        //     if (countVerifica == 0) {
+        //         break;
+        //     }
+        // }
 
         System.out.println("\nArray após ordenação dos elementos:");
         imprimirArray(array);
+
+        System.out.println("\nValor do countTeste: " + countTeste);
 
         scan.close();
     }
