@@ -74,7 +74,7 @@ public class App {
         // System.out.println("\nInforme o número que deseja buscar: ");
         // numero = scan.nextInt();
 
-        // //Busca linear:
+        // ** Busca linear:
         // System.out.println("\n*****BUSCA LINEAR*****");
 
         // for (int i = 0; i < array.length; i++) {
@@ -89,12 +89,14 @@ public class App {
         // } else {
         //     System.out.println("\nElemento não encontrado dentro do array!");
         // }
+        // ** FIM: Busca Linear
 
         System.out.println("\nArray com os elementos antes da ordenação:");
         imprimirArray(array);
 
         int countTeste = 0, flag;
 
+        // ** Selection Sort
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[j] < array[i]) {
@@ -105,7 +107,15 @@ public class App {
             }
         }
 
-        //SELECTION SORT
+        System.out.println("\nArray após ordenação dos elementos:");
+        imprimirArray(array);
+        // ** FIM: Selection Sort
+
+        // ** Busca Binária
+
+        // ** FIM: Busca Binária
+
+        // ** SELECTION SORT
         // for (int i = 0; i < array.length; i++) {
         //     int indiceDoMenor = i;
         //     for (int j = i + 1; j < array.length; j++) {
@@ -143,8 +153,7 @@ public class App {
         //     }
         // }
 
-        System.out.println("\nArray após ordenação dos elementos:");
-        imprimirArray(array);
+        
 
         System.out.println("\nValor do countTeste: " + countTeste);
 
