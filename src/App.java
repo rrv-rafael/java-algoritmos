@@ -94,7 +94,7 @@ public class App {
         System.out.println("\nArray com os elementos antes da ordenação:");
         imprimirArray(array);
 
-        int countTeste = 0, flag;
+        int flag;
 
         // ** Selection Sort
         for (int i = 0; i < array.length; i++) {
@@ -112,7 +112,29 @@ public class App {
         // ** FIM: Selection Sort
 
         // ** Busca Binária
+        int resultado = -1, inicio = 0, fim = array.length - 1, meio = 0, alvo;
         
+        System.out.println("Informe o elemento que deseja encontrar: ");
+        alvo = scan.nextInt();
+
+        while (inicio <= fim) {
+            meio = (inicio + fim) / 2;
+
+            if (array[meio] < alvo) {
+                inicio = meio + 1;
+            } else if (array[meio] > alvo) {
+                fim = meio - 1;
+            } else if (array[meio] == alvo) {
+                resultado = meio;
+                break;
+            }
+        }
+
+        if (resultado < 0) {
+            System.out.println("Elemento não encontrado!");
+        } else {
+            System.out.printf("\nO elemento %d está na posição %d", alvo, resultado);
+        }        
         // ** FIM: Busca Binária
 
         // ** SELECTION SORT
@@ -152,10 +174,6 @@ public class App {
         //         break;
         //     }
         // }
-
-        
-
-        System.out.println("\nValor do countTeste: " + countTeste);
 
         scan.close();
     }
