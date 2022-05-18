@@ -112,7 +112,7 @@ public class App {
         // ** FIM: Selection Sort
 
         // ** Busca Binária
-
+        
         // ** FIM: Busca Binária
 
         // ** SELECTION SORT
