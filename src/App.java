@@ -253,3 +253,68 @@ public class App {
         }
     }
 }
+
+// ** Código completo do ultimo desafio:
+// public class App {
+//     public static void main(String args[]) {
+//         Scanner scann = new Scanner(System.in);
+        
+//         int tamanho = Integer.parseInt(scann.nextLine());
+        
+//         Estudante[] estudantes = new Estudante[tamanho];
+//         for(int i = 0; i < estudantes.length; i++)
+//         {
+//             int id = scann.nextInt();
+//             String nome = scann.next();
+//             double nota = scann.nextDouble();
+            
+//             estudantes[i] = new Estudante(id, nome, nota);
+//         }
+
+//         int id;
+//         String nome;
+//         double nota;
+//         int indiceVerificador;
+        
+//         for (int i = 0; i < estudantes.length; i++) {
+//             indiceVerificador = i;
+//             for (int j = i + 1; j < estudantes.length; j++) {
+//                 if (estudantes[j].getNota() > estudantes[indiceVerificador].getNota()) {
+//                     indiceVerificador = j;
+//                 } else if (estudantes[j].getNota() == estudantes[indiceVerificador].getNota()) {
+//                     if (estudantes[j].getNome().compareTo(estudantes[indiceVerificador].getNome()) < 0) {
+//                         indiceVerificador = j;
+//                     } else if (estudantes[j].getNome().compareTo(estudantes[indiceVerificador].getNome()) == 0) {
+//                         if (estudantes[j].getId() < estudantes[indiceVerificador].getId()) {
+//                             indiceVerificador = j;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             id = estudantes[indiceVerificador].getId();
+//             nome = estudantes[indiceVerificador].getNome();
+//             nota = estudantes[indiceVerificador].getNota();
+//             estudantes[indiceVerificador] = estudantes[i];
+//             estudantes[i] = new Estudante(id, nome, nota);
+//         }
+        
+//         int inicio = 0, fim = estudantes.length - 1, meio = 0;
+        
+//         nota = scann.nextDouble();
+        
+//         while (inicio <= fim) {
+//             meio = (inicio + fim) / 2;
+//             if (estudantes[meio].getNota() < nota) {
+//                 inicio = meio + 1;
+//             } else if (estudantes[meio].getNota() > nota) {
+//                 fim = meio - 1;
+//             } else if (estudantes[meio].getNota() == nota) {
+//                 System.out.println(estudantes[meio].getNome());
+//                 break;
+//             }
+//         }
+
+//         scann.close();
+//     }
+// }
