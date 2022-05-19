@@ -51,12 +51,12 @@ public class App {
         //     estudantes[indiceVerificador] = estudantes[i];
         //     estudantes[i] = estudante;
 
-        //     // id = estudantes[indiceVerificador].getId();
-        //     // nome = estudantes[indiceVerificador].getNome();
-        //     // nota = estudantes[indiceVerificador].getNota();
-        //     // estudantes[indiceVerificador] = estudantes[i];
+        //    // id = estudantes[indiceVerificador].getId();
+        //    // nome = estudantes[indiceVerificador].getNome();
+        //    // nota = estudantes[indiceVerificador].getNota();
+        //    // estudantes[indiceVerificador] = estudantes[i];
 
-        //     // estudantes[i] = new Estudante(id, nome, nota);
+        //    // estudantes[i] = new Estudante(id, nome, nota);
         // }
 
         // for(Estudante e: estudantes){
