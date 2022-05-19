@@ -4,70 +4,70 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
 
-        int tamanho = 10;
-        int[] array = new int[tamanho];
+        int tamanho = 5;
+        // int[] array = new int[tamanho];
 
-        // Estudante[] estudantes = new Estudante[tamanho];
+        Estudante[] estudantes = new Estudante[tamanho];
 
-        // int id;
-        // String nome;
-        // double nota;
+        int id;
+        String nome;
+        double notaEstudante;
 
-        // for (int i = 0; i < estudantes.length; i++) {
-        //     System.out.println("Informe o id: ");
-        //     id = scan.nextInt();
+        for (int i = 0; i < estudantes.length; i++) {
+            System.out.println("Informe o id: ");
+            id = scan.nextInt();
 
-        //     scan.nextLine();
+            scan.nextLine();
             
-        //     System.out.println("Informe o nome: ");
-        //     nome = scan.nextLine();
+            System.out.println("Informe o nome: ");
+            nome = scan.nextLine();
 
-        //     System.out.println("Informe a nota: ");
-        //     nota = scan.nextDouble();
+            System.out.println("Informe a nota: ");
+            notaEstudante = scan.nextDouble();
 
-        //     estudantes[i] = new Estudante(id, nome, nota);
-        // }
+            estudantes[i] = new Estudante(id, nome, notaEstudante);
+        }
 
-        // int indiceVerificador;
+        int indiceVerificador;
 
-        // for (int i = 0; i < estudantes.length; i++) {
-        //     indiceVerificador = i;
+        for (int i = 0; i < estudantes.length; i++) {
+            indiceVerificador = i;
 
-        //     for (int j = i + 1; j < estudantes.length; j++) {
-        //         if (estudantes[j].getNota() > estudantes[indiceVerificador].getNota()) {
-        //             indiceVerificador = j;
-        //         } else if (estudantes[j].getNota() == estudantes[indiceVerificador].getNota()) {
-        //             if (estudantes[j].getNome().compareTo(estudantes[indiceVerificador].getNome()) < 0) {
-        //                 indiceVerificador = j;
-        //             } else if (estudantes[j].getNome().compareTo(estudantes[indiceVerificador].getNome()) == 0) {
-        //                 if (estudantes[j].getId() < estudantes[indiceVerificador].getId()) {
-        //                     indiceVerificador = j;
-        //                 }
-        //             }
-        //         }
-        //     }
+            for (int j = i + 1; j < estudantes.length; j++) {
+                if (estudantes[j].getNota() > estudantes[indiceVerificador].getNota()) {
+                    indiceVerificador = j;
+                } else if (estudantes[j].getNota() == estudantes[indiceVerificador].getNota()) {
+                    if (estudantes[j].getNome().compareTo(estudantes[indiceVerificador].getNome()) < 0) {
+                        indiceVerificador = j;
+                    } else if (estudantes[j].getNome().compareTo(estudantes[indiceVerificador].getNome()) == 0) {
+                        if (estudantes[j].getId() < estudantes[indiceVerificador].getId()) {
+                            indiceVerificador = j;
+                        }
+                    }
+                }
+            }
 
-        //     Estudante estudante = estudantes[indiceVerificador];
-        //     estudantes[indiceVerificador] = estudantes[i];
-        //     estudantes[i] = estudante;
+            Estudante estudante = estudantes[indiceVerificador];
+            estudantes[indiceVerificador] = estudantes[i];
+            estudantes[i] = estudante;
 
-        //    // id = estudantes[indiceVerificador].getId();
-        //    // nome = estudantes[indiceVerificador].getNome();
-        //    // nota = estudantes[indiceVerificador].getNota();
-        //    // estudantes[indiceVerificador] = estudantes[i];
+           // id = estudantes[indiceVerificador].getId();
+           // nome = estudantes[indiceVerificador].getNome();
+           // nota = estudantes[indiceVerificador].getNota();
+           // estudantes[indiceVerificador] = estudantes[i];
 
-        //    // estudantes[i] = new Estudante(id, nome, nota);
-        // }
+           // estudantes[i] = new Estudante(id, nome, nota);
+        }
 
-        // for(Estudante e: estudantes){
-        //     System.out.println(e.getNome());
-        // }
+        for(Estudante e: estudantes){
+            System.out.println(e.getNome());
+        }
         // int[] array = new int[10];
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.printf("\nInforme o %dº valor: ", (i + 1));
-            array[i] = scan.nextInt();
-        }
+        // for (int i = 0; i < array.length; i++) {
+        //     System.out.printf("\nInforme o %dº valor: ", (i + 1));
+        //     array[i] = scan.nextInt();
+        // }
 
         // int numero, posicaoNumero = -1;
 
@@ -91,50 +91,71 @@ public class App {
         // }
         // ** FIM: Busca Linear
 
-        System.out.println("\nArray com os elementos antes da ordenação:");
-        imprimirArray(array);
+        // System.out.println("\nArray com os elementos antes da ordenação:");
+        // imprimirArray(array);
 
-        int flag;
+        // int flag;
 
-        // ** Selection Sort
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < array[i]) {
-                    flag = array[i];
-                    array[i] = array[j];
-                    array[j] = flag;
-                }
-            }
-        }
+        // // ** Selection Sort
+        // for (int i = 0; i < array.length; i++) {
+        //     for (int j = i + 1; j < array.length; j++) {
+        //         if (array[j] < array[i]) {
+        //             flag = array[i];
+        //             array[i] = array[j];
+        //             array[j] = flag;
+        //         }
+        //     }
+        // }
 
-        System.out.println("\nArray após ordenação dos elementos:");
-        imprimirArray(array);
+        // System.out.println("\nArray após ordenação dos elementos:");
+        // imprimirArray(array);
         // ** FIM: Selection Sort
 
         // ** Busca Binária
-        int resultado = -1, inicio = 0, fim = array.length - 1, meio = 0, alvo;
+        int inicio = 0, fim = estudantes.length - 1, meio = 0;
+        double nota;
+        String resultado = "";
         
-        System.out.println("Informe o elemento que deseja encontrar: ");
-        alvo = scan.nextInt();
-
+        nota = scan.nextDouble();
+        
         while (inicio <= fim) {
             meio = (inicio + fim) / 2;
-
-            if (array[meio] < alvo) {
+            if (estudantes[meio].getNota() < nota) {
                 inicio = meio + 1;
-            } else if (array[meio] > alvo) {
+            } else if (estudantes[meio].getNota() > nota) {
                 fim = meio - 1;
-            } else if (array[meio] == alvo) {
-                resultado = meio;
+            } else if (estudantes[meio].getNota() == nota) {
+                resultado = estudantes[meio].getNome();
                 break;
             }
         }
+        
+        System.out.println(resultado);
+        // int inicio = 0, fim = estudantes.length - 1, meio = 0;
+        // double alvo;
+        // String resultado = "";
+        
+        // System.out.println("Informe o elemento que deseja encontrar: ");
+        // alvo = scan.nextDouble();
 
-        if (resultado < 0) {
-            System.out.println("Elemento não encontrado!");
-        } else {
-            System.out.printf("\nO elemento %d está na posição %d", alvo, resultado);
-        }        
+        // while (inicio <= fim) {
+        //     meio = (inicio + fim) / 2;
+
+        //     if (estudantes[meio].getNota() < alvo) {
+        //         inicio = meio + 1;
+        //     } else if (estudantes[meio].getNota() > alvo) {
+        //         fim = meio - 1;
+        //     } else if (estudantes[meio].getNota() == alvo) {
+        //         resultado = estudantes[meio].getNome();
+        //         break;
+        //     }
+        // }
+
+        // if (resultado.equals("")) {
+        //     System.out.println("Elemento não encontrado!");
+        // } else {
+        //     System.out.println("Aluno que possui a nota buscada: " + resultado);
+        // }        
         // ** FIM: Busca Binária
 
         // ** SELECTION SORT
@@ -176,6 +197,52 @@ public class App {
         // }
 
         scan.close();
+
+        // ** Tentativa de resposta do ultimo desafio:
+        // int indiceVerificador;
+        
+        // for (int i = 0; i < estudantes.length; i++) {
+        //     indiceVerificador = i;
+        //     for (int j = i + 1; j < estudantes.length; j++) {
+        //         if (estudantes[j].getNota() > estudantes[indiceVerificador].getNota()) {
+        //             indiceVerificador = j;
+        //         } else if (estudantes[j].getNota() == estudantes[indiceVerificador].getNota()) {
+        //             if (estudantes[j].getNome().compareTo(estudantes[indiceVerificador].getNome()) < 0) {
+        //                 indiceVerificador = j;
+        //             } else if (estudantes[j].getNome().compareTo(estudantes[indiceVerificador].getNome()) == 0) {
+        //                 if (estudantes[j].getId() < estudantes[indiceVerificador].getId()) {
+        //                     indiceVerificador = j;
+        //                 }
+        //             }
+        //         }
+        //     }
+            
+        //     Estudante estudante = estudantes[indiceVerificador];
+        //     estudantes[indiceVerificador] = estudantes[i];
+        //     estudantes[i] = estudante;
+        // }
+        
+        
+        
+        // int inicio = 0, fim = estudantes.length - 1, meio = 0;
+        // double nota;
+        // String resultado = "";
+        
+        // nota = scann.nextDouble();
+        
+        // while (inicio <= fim) {
+        //     meio = (inicio + fim) / 2;
+        //     if (estudantes[meio].getNota() < nota) {
+        //         inicio = meio + 1;
+        //     } else if (estudantes[meio].getNota() > nota) {
+        //         fim = meio - 1;
+        //     } else if (estudantes[meio].getNota() == nota) {
+        //         resultado = estudantes[meio].getNome();
+        //         break;
+        //     }
+        // }
+        
+        // System.out.println(resultado);
     }
 
     public static void imprimirArray(int[] array) {
